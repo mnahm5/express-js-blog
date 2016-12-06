@@ -13,7 +13,9 @@ block content
                 table(class='table table-striped')
                     tr
                         th Category Title
-                    tr
-                        td TITLE
-                        td
-                            a(class='btn btn-tiny btn-default' href='/manage/categories/edit/1') Edit
+                        th
+                    each category, i in categories
+                        tr
+                            td #{category.title}
+                            td
+                                a(class='btn btn-tiny btn-default' href='/manage/categories/edit/#{category._id}') Edit
